@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
+		<meta name="description" content="Simple, beautiful music player">
+		<meta name="theme-color" content="#0b1020">
+		<title>Simple Music Player</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<main class="player">
+			<audio id="audio"></audio>
+
+			<section class="now-playing">
+				<img id="cover" class="cover" src="" alt="cover">
+				<div class="meta">
+					<div id="title" class="title">No track selected</div>
+					<div id="artist" class="artist">—</div>
+					<div class="time">
+						<span id="current">0:00</span>
+						<span class="sep">/</span>
+						<span id="duration">0:00</span>
+					</div>
+				</div>
+			</section>
+
+			<div id="progress" class="progress" title="Click to seek"></div>
+			<div id="progress-filled" class="progress-filled"></div>
+
+			<section class="controls">
+				<button id="prev" class="ctrl" title="Previous track">⏮</button>
+				<button id="play" class="ctrl play" title="Play/Pause">▶</button>
+				<button id="next" class="ctrl" title="Next track">⏭</button>
+
+				<div class="extras">
+					<label class="vol" title="Volume">
+						<input id="volume" type="range" min="0" max="1" step="0.01" value="1" aria-label="Volume control">
+					</label>
+					<label class="autoplay"><input id="autoplay" type="checkbox" aria-label="Autoplay"> Autoplay</label>
+				</div>
+			</section>
+
+			<section class="playlist" id="playlist"></section>
+		</main>
+
+		<script src="script.js"></script>
+	</body>
+</html>
